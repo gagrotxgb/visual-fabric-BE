@@ -1,0 +1,135 @@
+id,sex,outfit,prompt
+1,men,Men Short Kurta,"Objective: You are a fashion design AI. Create a photorealistic image of a Men's traditional short Kurta on a simple mannequin.
+
+Instructions:
+- The entire kurta must be made from the provided fabric swatch image. 
+- The mannequin should be centered against a plain, neutral upscale store background.
+- The kurta should be hip-length, straight fit, full sleeves, with a simple mandarin/placket front.
+- The pyjama should be wide straight fit and proportionate to the kurta in a complementing light color. the hem width should be same as the pant's width at the knees
+- Pay close attention to the fabric's texture, weave and pattern; ensure realistic drape, folds, and seam placement on the mannequin.
+- The fabric's color, texture and pattern should be accurately represented in lighting that shows surface detail.
+- Output: full-body front view of the mannequin, studio lighting, neutral shadow on floor.
+"
+2,men,Men Long Kurta,"Objective: You are a fashion design AI. Create a photorealistic image of a Men's traditional long Kurta on a simple mannequin.
+
+Instructions:
+- The entire kurta must be made from the provided fabric swatch image.
+- The mannequin should be centered against a plain, neutral upscale store background.
+- The kurta should be knee-length, straight fit, full sleeves, with a simple mandarin/placket front.
+- The pyjama should be straight fit and proportionate to the kurta in a complementing light color. the hem width should be same as the pant's width at the knees
+- Pay close attention to the fabric's texture, weave and pattern; ensure realistic drape, folds, and seam placement on the mannequin.
+- The fabric's color, texture and pattern should be accurately represented in lighting that shows surface detail.
+- Output: full-body front view of the mannequin, studio lighting, neutral shadow on floor."
+3,men,Sherwani,"Objective: You are a fashion design AI. Create a photorealistic image of a Men's traditional Indian Sherwani on a simple mannequin.
+Instructions:
+
+The entire Sherwani must be made from the provided fabric swatch image.
+
+The mannequin should be centered against a plain, neutral royal store background.
+
+The Sherwani should be a long, coat-like garment, knee-length or longer, with full sleeves and a mandarin collar. It should be styled as if worn over a contrasting inner kurta (which should not use the swatch fabric). Give it a royal look
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+The fabric's color, texture and pattern should be accurately represented.'"
+4,men,Bandhgala,"Objective: You are a fashion design AI. Create a photorealistic image of a Men's traditional Indian Bandhgala (Jodhpuri) Suit on a simple headless mannequin.
+Instructions:
+
+Only the Bandhgala jacket must be made from the provided fabric swatch image.
+
+The mannequin should be centered against a plain, neutral upscale store background.
+
+The Bandhgala jacket should be waist-length with full sleeves and a high, closed mandarin collar.
+
+The Trousers should be straight fit and proportionate to the jackets in a complementing very light color. the hem width should be same as the pant's width at the knees
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+- Emphasize the fabric’s weave, pattern alignment at seams, and realistic tailoring details (buttons, lapel stitch).
+
+The fabric's color, texture and pattern should be accurately represented.'"
+5,men,Nehru Jacket over Kurta,"Objective: You are a fashion design AI. Create a photorealistic image of a Men's traditional Indian Nehru Jacket on a simple mannequin, worn over a plain white or off-white kurta.
+Instructions:
+
+The entire Nehru Jacket must be made from the provided fabric swatch image. The underlying kurta should be a simple, plain white or off-white fabric.
+
+The mannequin should be centered against a plain, neutral upscale store background.
+
+The jacket should be hip-length, sleeveless, and feature a mandarin collar.
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+The fabric's color, texture and pattern should be accurately represented.'
+"
+6,men,Pathani Suit,"Objective: You are a fashion design AI. Create a photorealistic image of a Men's traditional Indian Pathani Suit on a simple mannequin.
+Instructions:
+
+The entire Pathani Kurta and Salwar must be made from the provided fabric swatch image.
+
+The mannequin should be centered against a plain, neutral upscale store background.
+
+The Pathani Kurta should be knee-length, with full sleeves, a shirt collar, and a rounded hem. The Salwar should be loose and pleated.
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+The fabric's color, texture and pattern should be accurately represented.'"
+7,women,Saree (Nivi drape),"Objective: You are a fashion design AI. Create a photorealistic image of a Women's traditional Indian Saree on a simple mannequin.
+Instructions:
+
+The entire Saree drape must be made from the provided fabric swatch image. The accompanying blouse and petticoat should be simple and in a contrasting or complementary solid color (not from the swatch).
+
+The mannequin should be centered against a plain, neutral upscale store background.
+
+The Saree should be draped in a classic Nivi style, showcasing its full length and pallu.
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+The fabric's color, texture and pattern should be accurately represented.'
+
+"
+8,women,Lehenga–Choli,"Objective: You are a fashion design AI. Create a photorealistic image of a Women's Lehenga–Choli on a simple mannequin.
+
+Instructions:
+- The entire outfit (lehenga skirt, choli/blouse, and dupatta) must be made from the provided fabric swatch image.
+- The mannequin should be centered against a plain, neutral upscale store background.
+- The lehenga should be voluminous with visible flare and natural folds; the choli should be fitted and proportionate; dupatta should be semi-draped over one shoulder.
+- Show fabric weight and fall correctly—if the swatch is heavy brocade, lehenga should hold shape; if light chiffon, show soft flow.
+- Maintain pattern scale across skirt panels and blouse; show seam lines and embroidery texture if present in swatch.
+- The fabric's color, texture and pattern should be accurately represented.
+- Output: full-body front view, slight turn to show skirt flare and dupatta drape.
+"
+9,women,Anarkali Suit,"Objective: You are a fashion design AI. Create a photorealistic image of a Women's traditional Indian Anarkali Suit on a simple mannequin.
+Instructions:
+
+The entire Anarkali top, Churidar (trousers), and Dupatta (scarf) must be made from the provided fabric swatch image.
+
+The mannequin should be centered against a plain, neutral upscale store background.
+
+The Anarkali top should be floor-length, fitted at the bust and flaring dramatically downwards, with full sleeves and a round neck. The Churidar should be tight-fitting with gathers at the ankle. The Dupatta should be draped over one shoulder.
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+The fabric's color, texture and pattern should be accurately represented.'"
+10,women,salwar–Kameez,"Objective: You are a fashion design AI. Create a photorealistic image of a Women's traditional Indian Salwar Kameez suit on a simple mannequin.
+Instructions:
+
+The entire Kameez (tunic), Dupatta (scarf) and excluding salwar (trousers) must be made from the provided fabric swatch image.
+
+The mannequin should be centered against a plain, neutral upscale store background.
+
+The Kameez should be knee-length with full sleeves and a round neck. The Salwar should be a comfortable, pleated style. The Dupatta should be draped elegantly over one shoulder.
+
+Pay close attention to the fabric's texture and pattern, ensuring it realistically drapes and folds on the mannequin's form.
+
+The fabric's color, texture and pattern should be accurately represented.'"
+11,women,womens Kurti with Jeans,"Objective: You are a fashion design AI. Create a photorealistic image of a Women's Kurti paired with  jeans on a simple mannequin.
+
+Instructions:
+- The entire outfit kurti of must be made from the provided fabric swatch image. Add a complimenting wide fit jeans below it
+- The mannequin should be centered against a plain, neutral upscale store background.
+- Kurti should be hip-length, straight silhouette, fluu sleeves; jeans should be wide-legged and proportionate to the kurti.
+- for jeans style, render denim texture
+- Show seam details, side slits (if any), and natural creasing; ensure pattern scale looks realistic on the kurti
+- The fabric's color, texture and pattern must be accurately represented in studio lighting.
+- Output: full-body front view, casual/fusion styling.
+"

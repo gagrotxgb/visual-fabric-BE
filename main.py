@@ -71,7 +71,7 @@ app.add_middleware(
 @app.get("/prompts/")
 async def get_prompts():
     try:
-        df = pd.read_csv('/content/prompts.csv', dtype={'id': str})
+        df = pd.read_csv('prompts.csv', dtype={'id': str})
         outfit_list = df[['id', 'outfit']].to_dict(orient='records')
 
         return outfit_list

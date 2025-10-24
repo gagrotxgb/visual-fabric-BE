@@ -37,6 +37,12 @@ def generate_mannequin_mockup(fabric_image_bytes, text_prompt):
         print("🤖 Sending request to Gemini API...")
         response = model.generate_content([text_prompt, fabric_swatch_image])
 
+        if not response.candidates:
+            print("🚨 Error: Gemini API returned no candidates. The prompt may have been blocked.")
+            if hasattr(response, 'prompt_feedback'):
+                print(f"   Prompt Feedback: {response.prompt_feedback}")
+            return None
+
         # Check for the image data in the response
         for part in response.candidates[0].content.parts:
             if hasattr(part, 'inline_data') and part.inline_data:
@@ -45,9 +51,8 @@ def generate_mannequin_mockup(fabric_image_bytes, text_prompt):
 
         # If the loop finishes, no image was found. Print debug info.
         print("🚨 Error: Gemini API did not return an image.")
-        if response.candidates[0].finish_reason.name != "STOP":
-             print(f"   Finish Reason: {response.candidates[0].finish_reason.name}")
-             print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
+        print(f"   Finish Reason: {response.candidates[0].finish_reason}")
+        print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
         if response.text:
             print(f"   Text Response: {response.text}")
 
@@ -73,6 +78,12 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
         print("🤖 Sending request to Gemini API for customer try-on...")
         response = model.generate_content([text_prompt, fabric_swatch_image, customer_image])
 
+        if not response.candidates:
+            print("🚨 Error: Gemini API returned no candidates for customer try-on. The prompt may have been blocked.")
+            if hasattr(response, 'prompt_feedback'):
+                print(f"   Prompt Feedback: {response.prompt_feedback}")
+            return None
+
         # Check for the image data in the response
         for part in response.candidates[0].content.parts:
             if hasattr(part, 'inline_data') and part.inline_data:
@@ -81,9 +92,8 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
 
         # If the loop finishes, no image was found. Print debug info.
         print("🚨 Error: Gemini API did not return an image for customer try-on.")
-        if response.candidates[0].finish_reason.name != "STOP":
-             print(f"   Finish Reason: {response.candidates[0].finish_reason.name}")
-             print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
+        print(f"   Finish Reason: {response.candidates[0].finish_reason}")
+        print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
         if response.text:
             print(f"   Text Response: {response.text}")
 

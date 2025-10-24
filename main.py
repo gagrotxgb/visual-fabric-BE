@@ -53,8 +53,10 @@ def generate_mannequin_mockup(fabric_image_bytes, text_prompt):
         print("🚨 Error: Gemini API did not return an image.")
         print(f"   Finish Reason: {response.candidates[0].finish_reason}")
         print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
-        if response.text:
+        try:
             print(f"   Text Response: {response.text}")
+        except Exception as e:
+            print(f"   Could not retrieve text response: {e}")
 
         return None # Return None because no image was found
 
@@ -94,8 +96,10 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
         print("🚨 Error: Gemini API did not return an image for customer try-on.")
         print(f"   Finish Reason: {response.candidates[0].finish_reason}")
         print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
-        if response.text:
+        try:
             print(f"   Text Response: {response.text}")
+        except Exception as e:
+            print(f"   Could not retrieve text response: {e}")
 
         return None # Return None because no image was found
 

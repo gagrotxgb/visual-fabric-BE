@@ -101,6 +101,7 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
 
         # If the loop finishes, no image was found. Print debug info.
         print("🚨 Error: Gemini API did not return an image for customer try-on.")
+        print(response)
         print(f"   Finish Reason: {response.candidates[0].finish_reason}")
         print(f"   Safety Ratings: {response.candidates[0].safety_ratings}") 
         # Try to get finish message if available

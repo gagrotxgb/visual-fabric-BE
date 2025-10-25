@@ -81,9 +81,16 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
         response = model.generate_content([text_prompt, fabric_swatch_image, customer_image])
 
         if not response.candidates:
-            print("🚨 Error: Gemini API returned no candidates for customer try-on. The prompt may have been blocked.")
+            print("🚨 Error: Gemini API returned no candidates for customer try-on.")
+            # Check prompt feedback for blocking information
             if hasattr(response, 'prompt_feedback'):
                 print(f"   Prompt Feedback: {response.prompt_feedback}")
+                if hasattr(response.prompt_feedback, 'block_reason'):
+                    print(f"   Block Reason: {response.prompt_feedback.block_reason}")
+                else:
+                    print(f"   Block Reason: N/A")
+                if hasattr(response.prompt_feedback, 'safety_ratings'):
+                    print(f"   Prompt Safety Ratings: {response.prompt_feedback.safety_ratings}")
             return None
 
         # Check for the image data in the response
@@ -95,7 +102,11 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
         # If the loop finishes, no image was found. Print debug info.
         print("🚨 Error: Gemini API did not return an image for customer try-on.")
         print(f"   Finish Reason: {response.candidates[0].finish_reason}")
-        print(f"   Safety Ratings: {response.candidates[0].safety_ratings}")
+        print(f"   Safety Ratings: {response.candidates[0].safety_ratings}") 
+        # Try to get finish message if available
+        if hasattr(response.candidates[0], 'finish_message'):
+            print(f"   Finish Message: {response.candidates[0].finish_message}")
+        
         try:
             print(f"   Text Response: {response.text}")
         except Exception as e:
@@ -105,6 +116,8 @@ def generate_customer_try_on(fabric_image_bytes, customer_image_bytes, text_prom
 
     except Exception as e:
         print(f"🚨 An unexpected error occurred during customer try-on image generation: {e}")
+        import traceback
+        print(f"   Full traceback: {traceback.format_exc()}")
         return None
 
 # --- 4. CREATE THE FASTAPI APP ---
